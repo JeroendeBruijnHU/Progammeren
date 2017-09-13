@@ -4,4 +4,5 @@ for x in s:
     if x in "aeiou":
         print(x, end=" ")
 
+#test
 
