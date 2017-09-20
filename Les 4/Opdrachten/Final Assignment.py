@@ -1,24 +1,32 @@
-import math
-
 def standaardprijs(afstandKM):
+    if afstandKM <= 0:
+        prijs1 = 0
+
     if afstandKM <= (50):
         prijs1 = (afstandKM * 0.8)
-        print(prijs1)
 
 
     else:
-        prijs2 = (afstandKM * 0.6) + 15.0
-        print(prijs2)
+        prijs1 = (afstandKM * 0.6) + 15.0
 
+
+    return prijs1
 
 
 def ritprijs(leeftijd, weekendrit, afstandKM):
-    if weekendrit == True:
+    basisprijs = standaardprijs(afstandKM)
+
+    if leeftijd < 12 or leeftijd >= 65:
+        if weekendrit == True:
+            basisprijs = basisprijs * 0.65
+        else:
+            basisprijs = basisprijs * 0.7
+
+    else:
+        if weekendrit == True:
+            basisprijs = basisprijs * 0.6
+
+    return basisprijs
 
 
-x = standaardprijs(afstandKM)
-
-standaardprijs(100)
-
-standaardtarief
-ritprijs(20,weekendrit=True, afstandKM=50)
+print(ritprijs(16, True, 40))
