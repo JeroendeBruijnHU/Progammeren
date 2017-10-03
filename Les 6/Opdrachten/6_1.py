@@ -1,7 +1,17 @@
-def seizoen(maand):
-    maanden = ['jan', 'feb', 'maa', 'apr', 'mei', 'jun' 'jul', 'aug', 'sep', 'okt', 'nov', 'dec']
-    if maanden == maanden[0, 1, 2]:
-        print("winter")
+maandnummer = input("Welk maandnummer is het?")
+maandnummer = int(maandnummer)
 
+if (maandnummer) > 0 and (maandnummer) < 3 :
+    print("winter")
 
-seizoen()
+elif (maandnummer) >= 3 and maandnummer < 6:
+    print("lente")
+
+elif (maandnummer) >= 6 and maandnummer < 9:
+    print("zomer")
+
+elif (maandnummer) >= 9 and maandnummer < 12:
+    print("Herfst")
+
+if (maandnummer) == 12:
+    print("winter")
